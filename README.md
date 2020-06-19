@@ -10,8 +10,10 @@ Running the python file provides an interactive experience including:
 * summarizing key statistics e.g., user data, trip data, etc.
 
 ### Files used
-Include the files used
+bikeshare-2.py
+data files: chicago.csv, new_york_city.csv, washington.csv.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity Course - Programming for Data Science with Python
+[Python Pandas Tutorial with Corey Schafer](https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS)
 
