@@ -14,6 +14,6 @@ bikeshare-2.py
 data files: chicago.csv, new_york_city.csv, washington.csv.
 
 ### Credits
-Udacity Course - Programming for Data Science with Python
-[Python Pandas Tutorial with Corey Schafer](https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS)
+Udacity Course - [Programming for Data Science with Python](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104)
+Corey Schafer's Youtube Channel - [Python Pandas Tutorial](https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS)
 
