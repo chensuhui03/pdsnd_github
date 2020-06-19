@@ -7,6 +7,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 months = ('january', 'february', 'march', 'april', 'may', 'june','all')
 weekdays = ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all')
+cities = ['chicago','washington','new_york_city']
 
 def get_filters():
     """
@@ -18,17 +19,23 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+<<<<<<< HEAD
     # get user input for city (chicago, new york city, washington). 
+||||||| merged common ancestors
+    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+=======
+    # get user input for city (chicago, new york city, washington).
+>>>>>>> refactoring
 
     city = input('Which city would you like to analyze? Available cities are Chicago, New York City, and Washington.\n').lower()
-    while city not in ["chicago","washington","new york city"]:
+    while city not in cities:
         print('Invalid city input. Please enter "Chicago", "New York City", or "Washington".')
         city = input('Which city would you like to analyze?\n').lower()
             
     # filter options:
     filt_option = input('Would you like to filter the data or not. Enter yes or no.\n')
     
-    while filt_option.lower() != 'yes'and filt_option.lower != 'no':
+    while filt_option.lower() != 'yes' and filt_option.lower != 'no':
         print('Invalid choice.')
         filt_option = input('Would you like to filter the data or not. Enter yes or no.\n')
         
@@ -38,15 +45,15 @@ def get_filters():
         
     # get user input for month (all, january, february, ... , june)
     else:
-        month = input('Which month would you like to analyze? Available months are from January to June. If you would like to see all the months, enter "all".\n').lower()
+        month = input('Which month would you like to analyze? Available months are from January to June. If you would like to see data in all months, enter "all".\n').lower()
         while month not in months: 
             print('\n Invalid month input. Please input a month from January to June, spelled in full or enter "all" for all the records.\n')
             month = input('Which month would you like to analyze? ').lower()
     # get user input for day of week (all, monday, tuesday, ... sunday)
-        day = input('Which day of the week would you like to check? Please enter the full weekday name. If you would like to see all days, enter "all".\n').lower()
+        day = input('Which day of the week would you like to analyze? Please enter the full weekday name. If you would like to see dat in all weekdays, enter "all".\n').lower()
         while day not in weekdays:
             print('\n Invalid weekday input. Please enter the full weekday name or enter "all" for all the records.\n')
-            day = input('Which day of the week would you like to check?\n').lower()
+            day = input('Which day of the week would you like to analyze?\n').lower()
 
     print('-'*40)
     return city, month, day
@@ -88,7 +95,7 @@ def load_data(city, month, day):
     if day != 'all':
         # filter by day of week to create the new dataframe
         weekday = weekdays.index(day)
-        filt2 = (df['day_of_week'] == weekday) ########
+        filt2 = (df['day_of_week'] == weekday) 
         df = df[filt2]
         
     return df
@@ -167,7 +174,7 @@ def user_stats(df,city):
     user_types = df['User Type'].value_counts()
     print(user_types)
 
-# Display counts of gender
+    # Display counts of gender
     if city == 'washington':
         print('User gender information is not avaialbe for {}'.format(city.title()))
     else:
@@ -180,10 +187,10 @@ def user_stats(df,city):
     else:
         user_birth_min = df['Birth Year'].min()
         user_birth_max = df['Birth Year'].max()
-        user_birth_mode = df['Birth Year'].mode()[0] #####
+        user_birth_mode = df['Birth Year'].mode()[0] 
         print('The earliest year of birth is {}. The most recent year of birth is {}. The msot common year of birth is {}.'.format(user_birth_min, user_birth_max, user_birth_mode))
     
-def load_raw(df): #####################
+def load_raw(df): 
     """Load 5 raw records a time per user request."""
     raw_date = input("Would you like to see some raw data? Enter yes or no. \n")
     i = 0
