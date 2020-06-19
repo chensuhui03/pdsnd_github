@@ -19,7 +19,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington).
 
     city = input('Which city would you like to analyze? Available cities are Chicago, New York City, and Washington.\n').lower()
     while city not in cities:
@@ -89,7 +89,7 @@ def load_data(city, month, day):
     if day != 'all':
         # filter by day of week to create the new dataframe
         weekday = weekdays.index(day)
-        filt2 = (df['day_of_week'] == weekday) ########
+        filt2 = (df['day_of_week'] == weekday) 
         df = df[filt2]
         
     return df
@@ -168,7 +168,7 @@ def user_stats(df,city):
     user_types = df['User Type'].value_counts()
     print(user_types)
 
-# Display counts of gender
+    # Display counts of gender
     if city == 'washington':
         print('User gender information is not avaialbe for {}'.format(city.title()))
     else:
@@ -181,10 +181,10 @@ def user_stats(df,city):
     else:
         user_birth_min = df['Birth Year'].min()
         user_birth_max = df['Birth Year'].max()
-        user_birth_mode = df['Birth Year'].mode()[0] #####
+        user_birth_mode = df['Birth Year'].mode()[0] 
         print('The earliest year of birth is {}. The most recent year of birth is {}. The msot common year of birth is {}.'.format(user_birth_min, user_birth_max, user_birth_mode))
     
-def load_raw(df): #####################
+def load_raw(df): 
     """Load 5 raw records a time per user request."""
     raw_date = input("Would you like to see some raw data? Enter yes or no. \n")
     i = 0
