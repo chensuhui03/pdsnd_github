@@ -29,7 +29,7 @@ def get_filters():
     # filter options:
     filt_option = input('Would you like to filter the data or not. Enter yes or no.\n')
     
-    while filt_option.lower() != 'yes'and filt_option.lower != 'no':
+    while filt_option.lower() != 'yes' and filt_option.lower != 'no':
         print('Invalid choice.')
         filt_option = input('Would you like to filter the data or not. Enter yes or no.\n')
         
@@ -39,15 +39,15 @@ def get_filters():
         
     # get user input for month (all, january, february, ... , june)
     else:
-        month = input('Which month would you like to analyze? Available months are from January to June. If you would like to see all the months, enter "all".\n').lower()
+        month = input('Which month would you like to analyze? Available months are from January to June. If you would like to see data in all months, enter "all".\n').lower()
         while month not in months: 
             print('\n Invalid month input. Please input a month from January to June, spelled in full or enter "all" for all the records.\n')
             month = input('Which month would you like to analyze? ').lower()
     # get user input for day of week (all, monday, tuesday, ... sunday)
-        day = input('Which day of the week would you like to check? Please enter the full weekday name. If you would like to see all days, enter "all".\n').lower()
+        day = input('Which day of the week would you like to analyze? Please enter the full weekday name. If you would like to see dat in all weekdays, enter "all".\n').lower()
         while day not in weekdays:
             print('\n Invalid weekday input. Please enter the full weekday name or enter "all" for all the records.\n')
-            day = input('Which day of the week would you like to check?\n').lower()
+            day = input('Which day of the week would you like to analyze?\n').lower()
 
     print('-'*40)
     return city, month, day
