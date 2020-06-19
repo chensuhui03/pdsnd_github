@@ -7,6 +7,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 months = ('january', 'february', 'march', 'april', 'may', 'june','all')
 weekdays = ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all')
+cities = ['chicago','washington','new_york_city']
 
 def get_filters():
     """
@@ -21,7 +22,7 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
     city = input('Which city would you like to analyze? Available cities are Chicago, New York City, and Washington.\n').lower()
-    while city not in ["chicago","washington","new york city"]:
+    while city not in cities:
         print('Invalid city input. Please enter "Chicago", "New York City", or "Washington".')
         city = input('Which city would you like to analyze?\n').lower()
             
